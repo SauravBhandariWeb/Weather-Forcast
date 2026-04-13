@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+height: min-content;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+
+nav {
+    padding: 1rem;
+    width: 100%;
+    background: linear-gradient(to bottom, pink, grey, yellow);
+    position: fixed; /* changed from absolute */
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    text-shadow: 3px 3px 5px black;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, orange, white, orange, black);
+}
+
+
+.container {
+   
+    cursor: pointer;
+    width: 90%;
+    max-width: 350px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: container 1.4s ease infinite alternate;
+}
+
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.city {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.temp {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+.icon img {
+    width: 100px;
+    animation: change 1.4s ease infinite alternate;
+}
+
+
+.minmax {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.details div {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* PRESSURE */
+.pressure {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* HOVER */
+.container:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* ANIMATIONS */
+@keyframes change {
+    0% { transform: translateX(1px); }
+    50% { transform: translateY(1px); }
+    100% { transform: translateY(-1px); }
+}
+
+@keyframes container {
+    0% { transform: translateX(3px); }
+    50% { transform: translateY(3px); }
+    100% { transform: translateY(-3px); }
+}
+
+/* TEXT EFFECT */
+h1, p, h2, div {
+    text-shadow: 1px 1px 3px black;
+}
+/* 
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+
+    nav h1 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        height: 80%;
+        padding: 20px;
+    }
+
+    .city {
+        font-size: 22px;
+    }
+
+    .temp {
+        font-size: 36px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .icon img {
+        width: 80px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+} 
