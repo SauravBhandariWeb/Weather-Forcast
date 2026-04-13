@@ -44,31 +44,11 @@ project/
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run the Project ##
 
-1. Clone the repository:
+**Run the app in the terminal:
 
-git clone https://github.com/your-username/your-repo-name.git
-
-
-2. Navigate to project folder:
-
-cd your-repo-name
-
-
-3. Install dependencies:
-
-pip install flask requests
-
-
-4. Run the app:
-
-python app.py
-
-
-5. Open in browser:
-
-http://127.0.0.1:5000/
+python3 app.py
 
 
 ---
